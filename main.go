@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/m7nevil/goalgo/sort"
 	"github.com/m7nevil/goalgo/tree"
 	"log"
 )
@@ -13,15 +12,15 @@ func main() {
 	//sort.Merge(arr1, arr2)
 	//log.Println(arr1, arr2)
 
-	arr := []int{4, 6, 8, 1, 3, 88, 45, 58, 3456, 76, 457, 79, 21, 9, 47, 677, 31}
-
-	log.Println(arr[0:])
+	//arr := []int{4, 6, 8, 1, 3, 88, 45, 58, 3456, 76, 457, 79, 21, 9, 47, 677, 31}
+	//
+	//log.Println(arr[0:])
 	//res := sort.Bubble(arr)
 	//res := sort.Insertion(arr)
 	//res := sort.Selection(arr)
 	//res := sort.Merge(arr)
-	res := sort.Quick(arr)
-	log.Println(res)
+	//res := sort.Quick(arr)
+	//log.Println(res)
 
 	//node11 := tree.Node{Data:4}
 	//node12 := tree.Node{Data:5}
@@ -36,8 +35,8 @@ func main() {
 	//log.Println("===============")
 	//tree.PostOrderTraverse(&root)
 
-	sTree := tree.SortedTree{}
-	sTree.Add(5, 7, 3, 2, 4, 9, 10, 6)
+	//sTree := tree.SortedTree{}
+	//sTree.Add(5, 7, 3, 2, 4, 9, 10, 6)
 
 	//tree.PreOrderTraverse(sTree.Root)
 	//log.Println("===============")
@@ -45,5 +44,9 @@ func main() {
 	//log.Println("===============")
 	//tree.PostOrderTraverse(sTree.Root)
 
-	log.Println(sTree.Find(9))
+	//log.Println(sTree.Find(9))
+
+	heap := tree.NewHeap(20)
+	heap.Add(1, 4, 5, 76, 8, 9, 3, 45, 89, 43, 31)
+	log.Println(heap.ToString())
 }
